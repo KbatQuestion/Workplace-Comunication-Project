@@ -1,3 +1,9 @@
+#LDCW6123 - FUNDAMENTALS OF DIGITAL COMPETENCE FOR PROGRAMMER PART B
+
+# Memebers Name                        ID
+# Karthigeayah Maniam                 1211101399
+
+
 # AirAsia low-cost fare calculator
 # Sample prices in RM for demo only - not real AirAsia fares
 
