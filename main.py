@@ -1,3 +1,6 @@
+# AirAsia low-cost fare calculator
+# Sample prices in RM for demo only - not real AirAsia fares
+
 TAX_FEE_PER_PAX = 35.0
 INSURANCE_PER_PAX = 12.0
 FULL_SERVICE_MULT = 2.2
@@ -29,6 +32,7 @@ SEATS = {
 
 
 def get_choice(prompt, low, high):
+    # keep asking until we get a whole number in range
     while True:
         try:
             value = int(input(prompt))
@@ -72,6 +76,7 @@ def run_calculator():
     insurance = get_yes_no("Add travel insurance (RM12 per passenger)? (y/n): ")
 
     ins_cost = INSURANCE_PER_PAX if insurance else 0.0
+    # add-ons are per passenger, then the whole lot scales with pax
     add_ons_per_pax = bag + meal + seat + ins_cost
     low_cost_total = (base_fare + TAX_FEE_PER_PAX + add_ons_per_pax) * pax
     full_service_total = (base_fare * FULL_SERVICE_MULT + TAX_FEE_PER_PAX + ins_cost) * pax
