@@ -99,3 +99,20 @@ def run_calculator():
     else:
         print("With these add-ons, a full-service fare may be better value.")
     print("====================================")
+
+
+def main():
+    print("====================================")
+    print("  AirAsia Low-Cost Fare Calculator")
+    print("  (Sample prices for demo only)")
+    print("====================================")
+
+    again = True
+    while again:
+        run_calculator()
+        again = get_yes_no("\nCalculate another fare? (y/n): ")
+    print("\nThank you. Now everyone can fly!")
+
+
+if __name__ == "__main__":
+    main()
