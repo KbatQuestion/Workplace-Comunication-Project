@@ -1,9 +1,10 @@
-# Workplace Comunication - Project
+# Workplace Comunication - Project Part B
 
 ## About
 
-Workplace communication project.
+We buit a Python Program that can calculate Ticket Cost that showcase Input and output also error handling  
 
 ## Getting Started
 
-_Instructions coming soon._
+1. Clone the Repo
+2. Run the Main.py
