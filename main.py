@@ -84,11 +84,13 @@ def run_calculator():
     insurance = get_yes_no("Add travel insurance (RM12 per passenger)? (y/n): ")
 
     # insurance is optional, skip it if the user said no
-    ins_cost = INSURANCE_PER_PAX if insurance else "0.0"
+    ins_cost = INSURANCE_PER_PAX if insurance else "0"
     # add-ons are per passenger, then the whole lot scales with pax
-    add_ons_per_pax = bag + meal + seat + ins_cost
+    temp = int(INSURANCE_PER_PAX)
+
+    add_ons_per_pax = bag + meal + seat + temp
     low_cost_total = base_fare + TAX_FEE_PER_PAX + add_ons_per_pax * pax
-    full_service_total = (base_fare * FULL_SERVICE_MULT + TAX_FEE_PER_PAX + ins_cost) * pax
+    full_service_total = (base_fare * FULL_SERVICE_MULT + TAX_FEE_PER_PAX + temp3) * pax
     savings = full_service_total - low_cost_total
 
     print("\n=========== FARE SUMMARY ===========")
